@@ -3913,35 +3913,33 @@ body {
 .featured-rank-wrap {
   position: relative;
   margin: 0 0 32px 0;
-  padding-top: 40px; /* space for skin to overflow top */
+  padding-top: 50px;
 }
 
 .featured-rank-card {
   position: relative;
   border-radius: 20px;
-  background: linear-gradient(135deg, #1a0a3a 0%, #4913ae 50%, #7b2fff 100%);
-  box-shadow: 0 8px 40px rgba(73, 19, 174, 0.5), 0 2px 8px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #1a0a3a 0%, #4913ae 55%, #7b2fff 100%);
+  box-shadow: 0 8px 40px rgba(73,19,174,0.55), 0 2px 8px rgba(0,0,0,0.4);
   transform: perspective(1200px) rotateX(1.5deg);
   overflow: hidden;
-  min-height: 200px;
+  min-height: 180px;
 }
 
-/* Gloss overlay */
 .featured-rank-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+  background: linear-gradient(155deg, rgba(255,255,255,0.13) 0%, transparent 50%);
   pointer-events: none;
-  border-radius: 20px;
+  z-index: 1;
 }
 
-/* Dark fade on right for skin readability */
 .featured-rank-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.25) 0%, transparent 60%);
+  background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, transparent 55%, rgba(0,0,0,0.3) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -3949,21 +3947,22 @@ body {
 .featured-rank-card-inner {
   position: relative;
   z-index: 2;
-  padding: 28px 320px 28px 36px;
+  padding: 28px 300px 28px 36px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .featured-rank-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .featured-rank-icon {
   width: 52px;
   height: 52px;
+  min-width: 52px;
   object-fit: contain;
   border-radius: 12px;
   flex-shrink: 0;
@@ -3972,6 +3971,7 @@ body {
 .featured-rank-icon-fallback {
   width: 52px;
   height: 52px;
+  min-width: 52px;
   background: rgba(0,0,0,0.25);
   border-radius: 12px;
   display: flex;
@@ -3979,6 +3979,7 @@ body {
   justify-content: center;
   font-size: 1.4rem;
   color: #fff;
+  flex-shrink: 0;
 }
 
 .featured-rank-name {
@@ -3992,16 +3993,16 @@ body {
 
 .featured-rank-sub {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.6);
   font-family: 'Poppins', sans-serif;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .featured-rank-desc {
   font-size: 0.88rem;
   color: rgba(255,255,255,0.9);
   font-family: 'Poppins', sans-serif;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .featured-rank-desc ul,
@@ -4011,15 +4012,16 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .featured-rank-desc li::before {
-  content: '+ ';
+  content: '+';
   color: rgba(255,255,255,0.5);
+  margin-right: 7px;
 }
 
-.featured-rank-desc p { margin: 0 0 8px; }
+.featured-rank-desc p { margin: 0 0 6px; }
 
 .featured-rank-btn {
   display: inline-flex;
@@ -4037,6 +4039,7 @@ body {
   white-space: nowrap;
   align-self: flex-start;
   transition: background 0.2s, transform 0.2s;
+  margin-top: 4px;
 }
 
 .featured-rank-btn:hover {
@@ -4046,13 +4049,12 @@ body {
   text-decoration: none;
 }
 
-/* Skin overflowing the card */
 .featured-rank-skin {
   position: absolute;
-  right: 40px;
+  right: 60px;
   bottom: 0;
-  top: 0;
-  width: 280px;
+  width: 260px;
+  height: calc(100% + 50px);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -4061,12 +4063,11 @@ body {
 }
 
 .featured-rank-skin-img {
-  height: calc(100% + 60px);
+  height: 100%;
   width: auto;
   object-fit: contain;
   image-rendering: pixelated;
-  filter: drop-shadow(-8px 4px 24px rgba(0,0,0,0.6));
-  margin-bottom: -10px;
+  filter: drop-shadow(-6px 4px 20px rgba(0,0,0,0.7));
 }
 
 .rank-carousel {
@@ -4140,7 +4141,7 @@ body {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 20px 28px 44px 28px;
+  padding: 20px 28px 32px 28px;
 }
 
 .rank-slide-pkg-left {
@@ -4156,26 +4157,21 @@ body {
 }
 
 .rank-slide-pkg-img {
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 16px;
   flex-shrink: 0;
 }
 
 .rank-slide-pkg-middle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   z-index: 2;
-  text-align: center;
-  pointer-events: none;
+  position: relative;
+  min-width: 0;
 }
 
 .rank-slide-pkg-middle ul,
@@ -4185,8 +4181,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 3px;
+  gap: 7px;
 }
 
 .rank-slide-pkg-middle li {
@@ -4198,18 +4193,18 @@ body {
 }
 
 .rank-slide-pkg-middle li::before {
-  content: '• ';
+  content: '•';
   color: rgba(255,255,255,0.7);
+  margin-right: 7px;
 }
 
-.rank-slide-pkg-middle p { margin: 0 0 10px; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+.rank-slide-pkg-middle p { margin: 0; font-size: 0.92rem; color: rgba(255,255,255,0.95); }
 
 /* Force buy button single line */
 .rank-slide-pkg-left .rank-slide-btn {
   white-space: nowrap;
   padding: 8px 16px;
   font-size: 0.82rem;
-  margin-bottom: 16px;
 }
 
 /* Arrows in dots bar */
@@ -4404,15 +4399,12 @@ body {
 
 /* Skin panel — right side */
 .rank-slide-skin {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 200px;
+  flex-shrink: 0;
+  width: 160px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 3;
+  position: relative;
 }
 
 /* Real skin image — add class="rank-slide-skin-img" when replacing placeholder */
