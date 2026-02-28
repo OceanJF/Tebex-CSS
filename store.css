@@ -3995,21 +3995,25 @@ body {
 }
 
 .rank-slide-pkg-img {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
   border-radius: 16px;
   flex-shrink: 0;
 }
 
 .rank-slide-pkg-middle {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   z-index: 2;
-  position: relative;
-  min-width: 0;
+  text-align: center;
+  width: 50%;
 }
 
 .rank-slide-pkg-middle ul,
@@ -4019,6 +4023,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 7px;
 }
 
@@ -4031,12 +4036,11 @@ body {
 }
 
 .rank-slide-pkg-middle li::before {
-  content: '•';
+  content: '• ';
   color: rgba(255,255,255,0.7);
-  margin-right: 7px;
 }
 
-.rank-slide-pkg-middle p { margin: 0; font-size: 0.92rem; color: rgba(255,255,255,0.95); }
+.rank-slide-pkg-middle p { margin: 0 0 10px; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
 
 /* Force buy button single line */
 .rank-slide-pkg-left .rank-slide-btn {
