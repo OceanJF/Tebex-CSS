@@ -3979,7 +3979,7 @@ body {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 20px 28px 32px 28px;
+  padding: 20px 28px 44px 28px;
 }
 
 .rank-slide-pkg-left {
@@ -4025,7 +4025,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
+  gap: 3px;
 }
 
 .rank-slide-pkg-middle li {
