@@ -3924,8 +3924,15 @@ body {
   transform: perspective(1200px) rotateX(1.5deg);
   overflow: hidden;
   min-height: 180px;
+}
+
+.featured-rank-grid {
   display: grid;
   grid-template-columns: 260px 1fr 260px;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 180px;
 }
 
 .featured-rank-card::after {
