@@ -1,3 +1,8 @@
+/* Hide store logo from header nav */
+.header-logo {
+  display: none !important;
+}
+
 *,
 *::before,
 *::after {
@@ -4015,15 +4020,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
 }
 
 .featured-rank-store-logo {
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.7));
 }
 
 .featured-rank-ip {
@@ -4041,15 +4048,19 @@ body {
 }
 
 /* ── 3D SHADOW CARD ─────────────────────────────────────────── */
+
+.featured-rank-card-wrap {
+  position: relative;
+}
+
 .featured-rank-shadow-card {
   position: absolute;
-  left: 8px;
-  right: -8px;
-  top: 12px;
-  bottom: -12px;
+  left: 10px;
+  right: -10px;
+  top: 10px;
+  bottom: -10px;
   border-radius: 22px;
-  background: linear-gradient(135deg, #0d0620 0%, #2a0a7a 60%, #4913ae 100%);
-  opacity: 0.6;
+  background: linear-gradient(135deg, #0a0318 0%, #1e0860 60%, #330e94 100%);
   z-index: 0;
 }
 
