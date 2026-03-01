@@ -4011,16 +4011,15 @@ body {
 
 .featured-rank-desc {
   position: absolute;
-  left: 50%;
+  left: 320px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   font-size: 0.88rem;
   color: rgba(255,255,255,0.9);
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   z-index: 3;
   text-align: left;
-  white-space: nowrap;
 }
 
 .featured-rank-desc ul,
