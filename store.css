@@ -3977,15 +3977,11 @@ body {
 }
 
 .featured-rank-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  max-width: 48px;
-  max-height: 48px;
+  width: 180px;
+  height: auto;
+  max-width: 180px;
   object-fit: contain;
-  border-radius: 10px;
   flex-shrink: 0;
-  overflow: hidden;
 }
 
 .featured-rank-icon-fallback {
