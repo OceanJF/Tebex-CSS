@@ -3947,7 +3947,7 @@ body {
 .featured-rank-card-inner {
   position: relative;
   z-index: 2;
-  padding: 28px 300px 28px 36px;
+  padding: 28px 280px 28px 36px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -3960,12 +3960,15 @@ body {
 }
 
 .featured-rank-icon {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  max-height: 48px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 10px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .featured-rank-icon-fallback {
@@ -3999,10 +4002,17 @@ body {
 }
 
 .featured-rank-desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 0.88rem;
   color: rgba(255,255,255,0.9);
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+  z-index: 3;
+  text-align: center;
+  width: 280px;
 }
 
 .featured-rank-desc ul,
@@ -4012,6 +4022,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3px;
 }
 
