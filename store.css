@@ -4009,15 +4009,60 @@ body {
   font-weight: 700;
 }
 
+
+/* ── FEATURED ABOVE (logo + IP) ────────────────────────────── */
+.featured-rank-above {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.featured-rank-store-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+}
+
+.featured-rank-ip {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  color: rgba(255,255,255,0.85);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 8px 22px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+/* ── 3D SHADOW CARD ─────────────────────────────────────────── */
+.featured-rank-shadow-card {
+  position: absolute;
+  left: 8px;
+  right: -8px;
+  top: 12px;
+  bottom: -12px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0d0620 0%, #2a0a7a 60%, #4913ae 100%);
+  opacity: 0.6;
+  z-index: 0;
+}
+
 .featured-rank-wrap {
   position: relative;
-  margin: 0 0 32px 0;
-  padding-top: 60px;
+  margin: 0 0 48px 0;
+  padding-top: 0;
   perspective: 1000px;
 }
 
 .featured-rank-card {
   position: relative;
+  z-index: 1;
   border-radius: 20px;
   background: linear-gradient(135deg, #1a0a3a 0%, #4913ae 55%, #7b2fff 100%);
   box-shadow: 0 20px 60px rgba(73,19,174,0.7), 0 6px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15);
