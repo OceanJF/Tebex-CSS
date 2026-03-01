@@ -1,3 +1,216 @@
+/* ── NAV LOGO: center + bigger + IP below ───────────────────── */
+.header-nav {
+  position: relative;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.header-logo {
+  height: 64px !important;
+  display: block !important;
+}
+
+.header-center::after {
+  content: 'PIXELHQ.NET';
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+
+/* ── FR: FEATURED RANK (Donut-style) ───────────────────────── */
+.fr-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+/* Logo + IP above */
+.fr-above {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.fr-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.6));
+}
+
+.fr-ip {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.85);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 9px 26px;
+  border-radius: 8px;
+}
+
+/* Card stack */
+.fr-stack {
+  position: relative;
+  width: 100%;
+}
+
+/* Shadow/depth card behind */
+.fr-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d0320 0%, #250870 50%, #3a0fa0 100%);
+  transform: translate(10px, 12px);
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Main card */
+.fr-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1a0a3a 0%, #4913ae 55%, #7b2fff 100%);
+  box-shadow: 0 8px 40px rgba(73,19,174,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Gloss */
+.fr-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(155deg, rgba(255,255,255,0.1) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Left content */
+.fr-left {
+  position: relative;
+  z-index: 2;
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.fr-rank-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.fr-rank-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: -4px;
+}
+
+.fr-perks {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+}
+
+.fr-perks ul, .fr-perks ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fr-perks li::before {
+  content: '+';
+  margin-right: 8px;
+  color: rgba(255,255,255,0.5);
+}
+
+.fr-perks p { margin: 0 0 4px; }
+
+.fr-btn {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-top: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.fr-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Skin right side */
+.fr-skin {
+  position: relative;
+  z-index: 2;
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.fr-skin-img {
+  height: calc(100% + 40px);
+  width: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(-6px 0 20px rgba(0,0,0,0.6));
+  margin-bottom: 0;
+}
+
+/* Hide header nav logo */
+.header-logo {
+  display: none !important;
+}
+
+
 /* Hide store logo from header nav */
 .header-logo {
   display: none !important;
@@ -3914,7 +4127,6 @@ body {
 
 /* ── CAROUSEL ───────────────────────────────────────────────────── */
 
-/* ── FEATURED RANK CARD ─────────────────────────────────────── */
 
 /* ── LOADING SCREEN ─────────────────────────────────────────── */
 .page-loader {
@@ -4015,37 +4227,6 @@ body {
 }
 
 
-/* ── FEATURED ABOVE (logo + IP) ────────────────────────────── */
-.featured-rank-above {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
-  position: relative;
-  z-index: 2;
-}
-
-.featured-rank-store-logo {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.7));
-}
-
-.featured-rank-ip {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(8px);
-  color: rgba(255,255,255,0.85);
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  padding: 8px 22px;
-  border-radius: 8px;
-  text-transform: uppercase;
-}
 
 /* ── 3D SHADOW CARD ─────────────────────────────────────────── */
 
