@@ -3924,6 +3924,8 @@ body {
   transform: perspective(1200px) rotateX(1.5deg);
   overflow: hidden;
   min-height: 180px;
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
 }
 
 .featured-rank-card::after {
@@ -3944,10 +3946,6 @@ body {
   z-index: 1;
 }
 
-.featured-rank-card {
-  display: grid;
-  grid-template-columns: 260px 1fr 260px;
-}
 
 .featured-rank-left-col {
   display: flex;
