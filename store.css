@@ -12,11 +12,6 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: calc(100% + 80px);
-    margin-left: -40px;
-    box-sizing: border-box;
-    padding-left: 40px;
-    padding-right: 40px;
     background: rgba(26,26,27,0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
