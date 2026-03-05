@@ -1928,11 +1928,7 @@ body {
   color: var(--primary-color);
 }
 
-@media (max-width: 991px) {
-  .header-nav {
-    display: none;
-  }
-}
+
 
 .patron-grid {
   display: grid;
@@ -4100,32 +4096,6 @@ body {
   filter: drop-shadow(-6px 0 20px rgba(0,0,0,0.6));
 }
 
-/* Nav logo centered */
-.header-nav { position: relative; }
-.header-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-.header-logo {
-  height: 64px !important;
-  display: block !important;
-}
-.header-center::after {
-  content: 'PIXELHQ.NET';
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.55);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 4px 14px;
-  border-radius: 6px;
-}
 
 .rank-carousel {
   position: relative;
