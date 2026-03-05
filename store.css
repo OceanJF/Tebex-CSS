@@ -1,20 +1,12 @@
-/* Desktop nav - no backdrop, clean */
-.header-nav {
-  position: relative;
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
 /* Mobile nav - sticky with backdrop */
 @media (max-width: 991px) {
   .header-nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(26,26,27,0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(26,26,27,0.92) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
   }
 }
 
