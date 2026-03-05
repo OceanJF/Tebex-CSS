@@ -1,3 +1,32 @@
+/* ═══ HEADER NAV FIX ═══════════════════════════════════════════ */
+.header-nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 16px 0 !important;
+  position: relative !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  width: 100% !important;
+}
+
+@media (max-width: 991px) {
+  .header-nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background: rgba(10,10,11,0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    padding: 12px 16px !important;
+    margin: 0 -40px !important;
+    width: calc(100% + 80px) !important;
+    box-sizing: border-box !important;
+  }
+}
+/* ════════════════════════════════════════════════════════════════ */
+
 /* Mobile nav - sticky with backdrop */
 @media (max-width: 991px) {
   .header-nav {
