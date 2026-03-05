@@ -1,10 +1,12 @@
-/* Hide info button on desktop, show only on mobile */
-.package-btn-info {
+/* Hide info buttons on desktop, show only on mobile */
+.rank-info-btn,
+.featured-rank-info-btn {
   display: none !important;
 }
 
-@media (max-width: 768px) {
-  .package-btn-info {
+@media (max-width: 991px) {
+  .rank-info-btn,
+  .featured-rank-info-btn {
     display: flex !important;
   }
 }
