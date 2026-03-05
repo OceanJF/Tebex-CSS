@@ -1895,6 +1895,16 @@ body {
 
 @media (max-width: 991px) {
   .header-nav {
+    display: flex;
+    padding: 14px 16px;
+  }
+  .header-links {
+    display: none;
+  }
+  .header-logo {
+    height: 44px;
+  }
+  .header-back-link span {
     display: none;
   }
 }
