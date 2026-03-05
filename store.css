@@ -1,3 +1,60 @@
+/* Desktop nav - no backdrop, clean */
+.header-nav {
+  position: relative;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Mobile nav - sticky with backdrop */
+@media (max-width: 991px) {
+  .header-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: rgba(26,26,27,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* Cart button */
+.header-cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.07);
+  color: var(--text-primary);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.header-cart-btn:hover { background: rgba(255,255,255,0.13); color: var(--text-primary); }
+.header-cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Hide info buttons on desktop, show only on mobile */
 .rank-info-btn,
 .featured-rank-info-btn {
@@ -1795,12 +1852,6 @@ body {
   }
 }
 
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
 
 .header-left {
   flex: 1;
