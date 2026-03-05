@@ -5084,7 +5084,7 @@ body {
 }
 
 .rank-card-perks li i {
-  color: var(--primary-color);
+  color: #f0b429;
   font-size: 0.75rem;
   flex-shrink: 0;
 }
