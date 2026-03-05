@@ -308,7 +308,7 @@ body {
 
 .server-card-logo {
   flex: 1;
-  background: linear-gradient(135deg, #1a0445 0%, #3a0fa0 50%, #5b1fd4 100%);
+  background: linear-gradient(135deg, #1a0445 0%, #3a0fa0 50%, #5b1fd4 100%) !important;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
