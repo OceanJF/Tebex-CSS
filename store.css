@@ -5090,6 +5090,10 @@ body {
 }
 
 
+#featured-perks li i {
+  color: #f0b429 !important;
+}
+
 .rank-card-btn {
   background: var(--primary-color);
   color: #fff;
