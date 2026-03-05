@@ -4512,6 +4512,7 @@ body::-webkit-scrollbar {
 /* Header */
 @media (max-width: 767px) {
   .header-nav {
+    display: flex !important;
     padding: 12px 16px;
   }
 
