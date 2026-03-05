@@ -308,8 +308,10 @@ body {
 
 .server-card-logo {
   flex: 1;
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, #1a0445 0%, #3a0fa0 50%, #5b1fd4 100%);
   border-radius: 24px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,33 +377,10 @@ body {
   color: var(--text-secondary);
 }
 
+.store-block,
 .about-block,
 .join-block {
   background-color: var(--block-color);
-}
-
-.store-block {
-  background: linear-gradient(135deg, #1a0445 0%, #3a0fa0 50%, #5b1fd4 100%) !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.store-block::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('texture.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.55;
-  z-index: 0;
-  pointer-events: none;
-  border-radius: inherit;
-}
-
-.store-block > * {
-  position: relative;
-  z-index: 1;
 }
 
 .index-block-label {
